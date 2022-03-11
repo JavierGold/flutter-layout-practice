@@ -63,157 +63,24 @@ class MyApp extends StatelessWidget {
             )),
         body: Column(
           children: [
-            const SizedBox(
-              height: 25,
-            ),
-            Expanded(
-              child: Column(
+            Container(
+              height: 280,
+              child: ListView(
                 children: [
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://mitsoftware.com/wp-content/uploads/2020/12/flutter-1.jpg',
-                          width: 100,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "Texto",
-                        style: TextStyle(
-                            fontSize: 25.0,
-                            fontFamily: 'Arial',
-                            color: Colors.grey),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        "Texto pequeño",
-                        style: TextStyle(
-                            fontSize: 15.0,
-                            fontFamily: 'Arial',
-                            color: Colors.grey),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
+                  Row(
+                    children: [seccion1(), seccion1()],
                   ),
                   Row(
-                    children: const [
-                      Icon(Icons.star),
-                      Icon(Icons.star),
-                      Icon(Icons.star),
-                      Icon(Icons.star),
-                      Icon(Icons.star),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 25,
+                    children: [seccion1(), seccion1()],
                   ),
                   Row(
-                    children: [
-                      Card(
-                        color: Colors.amber,
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Image.network(
-                                  'https://mitsoftware.com/wp-content/uploads/2020/12/flutter-1.jpg',
-                                  width: 100,
-                                ),
-                                Column(
-                                  children: [
-                                    const Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "Texto Línea 1",
-                                        style: TextStyle(
-                                            fontSize: 10.0,
-                                            fontFamily: 'Arial',
-                                            color: Colors.purple),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "Texto Línea 2",
-                                        style: TextStyle(
-                                            fontSize: 10.0,
-                                            fontFamily: 'Arial',
-                                            color: Colors.purple),
-                                      ),
-                                    ),
-                                    ElevatedButton(
-                                        onPressed: () {}, child: Text("Botón"))
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        color: Colors.amber,
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Image.network(
-                                  'https://mitsoftware.com/wp-content/uploads/2020/12/flutter-1.jpg',
-                                  width: 100,
-                                ),
-                                Column(
-                                  children: [
-                                    const Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "Texto Línea 1",
-                                        style: TextStyle(
-                                            fontSize: 10.0,
-                                            fontFamily: 'Arial',
-                                            color: Colors.purple),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "Texto Línea 2",
-                                        style: TextStyle(
-                                            fontSize: 10.0,
-                                            fontFamily: 'Arial',
-                                            color: Colors.purple),
-                                      ),
-                                    ),
-                                    ElevatedButton(
-                                        onPressed: () {}, child: Text("Botón"))
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                    children: [seccion1(), seccion1()],
+                  ),
+                  Row(
+                    children: [seccion1(), seccion1()],
+                  ),
+                  Row(
+                    children: [seccion1(), seccion1()],
                   ),
                 ],
               ),
@@ -221,9 +88,144 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
+            Container(
+              height: 130,
+              child: Expanded(
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Row(
+                      children: [
+                        card1(),
+                        card1(),
+                        card1(),
+                        card1(),
+                        card1(),
+                        card1(),
+                        card1(),
+                        card1(),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+Widget seccion1() {
+  return Container(
+      child: Padding(
+    padding: const EdgeInsets.all(35.0),
+    child: Column(
+      children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.network(
+                'https://mitsoftware.com/wp-content/uploads/2020/12/flutter-1.jpg',
+                width: 100,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "Texto",
+              style: TextStyle(
+                  fontSize: 25.0, fontFamily: 'Arial', color: Colors.grey),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "Texto pequeño",
+              style: TextStyle(
+                  fontSize: 15.0, fontFamily: 'Arial', color: Colors.grey),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: const [
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+          ],
+        ),
+        const SizedBox(
+          height: 25,
+        ),
+      ],
+    ),
+  ));
+}
+
+Widget card1() {
+  return Card(
+    color: Colors.amber,
+    child: Padding(
+      padding: const EdgeInsets.all(6.0),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Image.network(
+                'https://mitsoftware.com/wp-content/uploads/2020/12/flutter-1.jpg',
+                width: 100,
+              ),
+              Column(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "Texto Línea 1",
+                      style: TextStyle(
+                          fontSize: 10.0,
+                          fontFamily: 'Arial',
+                          color: Colors.purple),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "Texto Línea 2",
+                      style: TextStyle(
+                          fontSize: 10.0,
+                          fontFamily: 'Arial',
+                          color: Colors.purple),
+                    ),
+                  ),
+                  ElevatedButton(onPressed: () {}, child: Text("Botón"))
+                ],
+              )
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
 }
